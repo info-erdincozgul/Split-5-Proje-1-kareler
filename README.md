@@ -1,31 +1,30 @@
-# Dinamik Kareler Uygulaması
-## Proje Hakkında
-Bu proje, React kullanarak, tıklanan karelerin durumunu değiştiren basit ve interaktif bir arayüz uygulamasıdır. Kullanıcı arayüzünde dört adet kare bulunur ve bu karelere tıklandığında aşağıdaki mantıkla renkleri değişir:
-* Tıklama: Bir kareye tıklandığında, kare yeşil renge döner.
-* İkinci Tıklama: Yeşil olan bir kareye tekrar tıklandığında, kare eski rengine dönerek söner.
-Bu uygulama, React'ın state yönetimi (useState), props kullanımı ve olay yönetimi (onClick) gibi temel kavramlarını pratik bir şekilde sergiler.
+# Dynamic Squares Application
+## About the Project
+This project is a simple, interactive interface application built with React that changes the state of squares when they are clicked. The user interface has four squares, and when they are clicked, their colors change according to the following logic:
+* Click: When a square is clicked, it turns green.
+* Second Click: When a green square is clicked again, it reverts to its original color.
+This application practically demonstrates fundamental React concepts such as state management (useState), prop usage, and event handling (onClick).
 ## Proje Yapısı
-Proje aşağıdaki temel dosyalardan oluşur:
-* Kareler.js: Uygulamanın ana bileşenidir. Karelerin durumunu yönetir, her bir kareyi oluşturur ve tıklama olaylarını işler.
-* index.css: Karelerin ve sayfanın genel stilini belirler. active sınıfı, karelerin yeşil renge dönmesi için kullanılır.
-* index.html: Uygulamanın temel HTML iskeletini içerir.
+* Kareler.js: The main component of the application. It manages the state of the squares, creates each square, and handles click events.
+* index.css: Defines the general styles for the squares and the page. The active class is used to make the squares turn green.
+* index.html: Contains the basic HTML structure of the application.
 ## Nasıl Çalıştırılır?
-Bu projeyi yerel ortamınızda çalıştırmak için Node.js ve npm'in kurulu olması gerekir.
-1. Gerekli Paketleri Yükleyin: Proje klasörünüzün terminalinde aşağıdaki komutu çalıştırarak gerekli bağımlılıkları yükleyin:
+To run this project on your local machine, you need to have Node.js and npm installed.
+1. Install Required Packages: In your project folder's terminal, run the following command to install the necessary dependencies:
 ```
 Bash
 npm install
 ```
-2. Uygulamayı Başlatın: Bağımlılıklar yüklendikten sonra, uygulamayı geliştirme modunda başlatmak için aşağıdaki komutu kullanın:
+2. Start the Application: After the dependencies are installed, use the following command to start the application in development mode:
 ```
 Bash
 npm run dev
 ```
-3. Tarayıcıda Görüntüleyin: Komut çalıştıktan sonra, projeniz genellikle http://localhost:5173 adresinde otomatik olarak açılır. Eğer açılmazsa, bu adresi tarayıcınızın adres çubuğuna elle yazarak görüntüleyebilirsiniz.
-## Kazanımlar
-Bu proje, aşağıdaki temel React ve web geliştirme konularında pratik yapmanızı sağlar:
-* State Yönetimi (useState): Bileşenlerin dinamik verilerini yönetme ve arayüzü bu verilere göre güncelleme.
-* Olay Yönetimi (onClick): Kullanıcı etkileşimlerine tepki veren fonksiyonlar yazma.
-* Props ve Durum İlişkisi: Bir bileşenin prop'larının (örneğin, className prop'unun) nasıl state'e bağlı olarak değiştiğini anlama.
-* Dinamik Liste Oluşturma (.map()): Bir dizideki her öğe için DOM'da dinamik olarak bileşenler (<div>) oluşturma.
-* Conditional Rendering: Bir koşula bağlı olarak (örneğin, bir karenin aktif olup olmamasına göre) farklı sınıflar (active) uygulama.
+3. View in Browser: Once the command is run, your project will typically open automatically at http://localhost:5173. If it doesn't, you can manually type this address into your browser's address bar to view it.
+## Learning Outcomes
+By exploring or working on this project, you can gain experience in the following areas:
+* You'll learn how to manage component state using the useState hook to keep track of a selected item. In this project, kareId is used to store the ID of the currently active square, and state holds the list of all squares.
+* You'll learn how to dynamically apply CSS classes based on state. The classAdiAl function checks if a square's ID matches the active kareId and returns the active class if it does. This changes the square's appearance, as defined in index.css.
+* You'll understand how to handle user events in React, specifically with the onClick event handler. The aktifEt function toggles the active state of a square, setting kareId to the clicked square's ID or an empty string if it's already active.
+* You'll learn how to render a list of components dynamically using the map method. The Kareler component maps over the state array to create and display a div for each square, assigning a unique key and data-testid to each one.
+* You'll learn how to use a basic CSS Grid layout. The squares container uses display: grid with grid-template-columns and grid-template-rows to arrange the squares in a 2x2 layout with a gap between them.
