@@ -4,11 +4,11 @@ This project is a simple, interactive interface application built with React tha
 * Click: When a square is clicked, it turns green.
 * Second Click: When a green square is clicked again, it reverts to its original color.
 This application practically demonstrates fundamental React concepts such as state management (useState), prop usage, and event handling (onClick).
-## Proje Yapısı
+## Project Structure
 * Kareler.js: The main component of the application. It manages the state of the squares, creates each square, and handles click events.
 * index.css: Defines the general styles for the squares and the page. The active class is used to make the squares turn green.
 * index.html: Contains the basic HTML structure of the application.
-## Nasıl Çalıştırılır?
+## How to Run
 To run this project on your local machine, you need to have Node.js and npm installed.
 1. Install Required Packages: In your project folder's terminal, run the following command to install the necessary dependencies:
 ```
